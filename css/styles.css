@@ -1,0 +1,40 @@
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff;
+}
+
+.hero-section {
+    background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+.services .card, .about .content, .contact .content {
+    transition: transform 0.3s;
+}
+
+.services .card:hover, .about .content:hover, .contact .content:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+}

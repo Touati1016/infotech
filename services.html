@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدماتنا - اسم المحل</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-brand img {
+            height: 50px;
+        }
+        .navbar-toggler {
+            border: none;
+            color: white;
+        }
+        .navbar-toggler:focus {
+            outline: none;
+        }
+         .header-title {
+            text-align: center;
+            margin: 0px;
+            padding: 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            width: 100%;
+            margin: 20px auto;
+            background-color: #fff;
+            margin-top: 10px;
+        }
+        .header-title h1 {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+
+        	
+        /* تحويل الروابط إلى أزرار واحدة تحت الأخرى مع خط أبيض بين الروابط */
+        .page-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .page-links a {
+            margin: 1px;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 5px 20px;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            background-color: #007bff;
+            color: white;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+        }
+        .page-links a::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: white;
+        }
+        .page-links a:last-child::before {
+            display: none; /* لا خط تحت الرابط الأخير */
+        }
+        .page-links a:hover {
+            background-color: white;
+            color: #007bff;
+            border-color: #007bff;
+            text-decoration: none;
+        }
+        .services-container {
+            margin-top: 40px;
+            display: block;
+        }
+        .service-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; 
+            width: 100%;
+            margin: 15px 0;
+            padding: 20px;
+            border: 4px solid #007bff;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background-color: #fff;
+            text-decoration: none;
+        }
+        .service-box i {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .service-box h3, .service-box p {
+            color: #007bff;
+            margin: 10px 0 5px 0;
+        }
+        .service-box p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        /* التأثير عند التفاعل مع الإطار */
+        .service-box:hover {
+            background-color: #e6f7ff;
+            color: #0056b3;
+            border-color: #0056b3;
+        }
+        .service-box:hover i {
+            color: #0056b3;
+        }
+        /* التأكد من أن النصوص لا تختفي عند التفاعل */
+        .service-box:hover h3, .service-box:hover p {
+            color: #0056b3;
+        }
+        /* إزالة الخط السفلي تحت النص */
+        .service-box h3, .service-box p {
+            text-decoration: none;
+        }
+        .footer {
+            background-color: #007bff;
+            color: #000;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 2px solid #007bff;
+        }
+        .footer img {
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .social-icons a {
+            color: #007bff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #ffdd00;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="شعار المحل">
+            </a>
+            <!-- زر القائمة القابلة للطي -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i> <!-- أيقونة القائمة -->
+            </button>
+            <!-- قائمة الصفحات القابلة للطي -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                <div class="page-links">
+                    <a href="index.html" class="btn-link">الصفحة الرئيسية</a>
+                    <a href="services.html" class="btn-link">خدماتنا</a>
+                    <a href="our-work.html" class="btn-link">أعمالنا</a>
+                    <a href="contact.html" class="btn-link">تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- عنوان الصفحة داخل إطار -->
+    <div class="header-title">
+        <h1>خدماتنا</h1>
+        <p>نقدم مجموعة واسعة من الخدمات في مجالات متعددة</p>
+    </div>
+
+    <!-- الخدمات -->
+    <div class="container services-container">
+        <a href="design.html" class="service-box">
+            <i class="fas fa-paint-brush"></i>
+            <h3>التصميم الجرافيكي</h3>
+            <p>خدمات تصميم مميزة للشركات والأفراد</p>
+        </a>
+
+        <a href="printing.html" class="service-box">
+            <i class="fas fa-print"></i>
+            <h3>الطباعة ومسح الضوئي</h3>
+            <p>طباعة احترافية لكافة الأنواع والأحجام مسح ضوئي احترافي للمستندات</p>
+        </a>
+
+        <a href="stamps.html" class="service-box">
+            <i class="fas fa-stamp"></i>
+            <h3>تصميم وصنع الأختام</h3>
+            <p>تصميم وصنع الأختام الخاصة بالشركات والأفراد</p>
+        </a>
+
+        <a href="scanning.html" class="service-box">
+    <i class="fas fa-desktop"></i> <!-- تغيير الأيقونة إلى أيقونة الكمبيوتر -->
+    <h3>التسجيلات الالكترونية</h3>
+    <p>مسح ضوئي احترافي للمستندات</p>
+</a>
+
+       <a href="payment.html" class="service-box">
+    <i class="fas fa-money-check-alt"></i>
+    <h3>دفع اشتراكات البرامج</h3>
+    <p>مسح ضوئي احترافي للمستندات</p>
+</a>
+
+        <a href="games.html" class="service-box">
+            <i class="fas fa-gamepad"></i>
+            <h3>شحن الألعاب</h3>
+            <p>شحن جميع أنواع الألعاب الإلكترونية</p>
+        </a>
+    </div>
+
+    <!-- الفوتر -->
+    <footer class="footer">
+        <!-- شعار المحل في المنتصف -->
+        <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="شعار المحل">
+            </a>
+        <!-- أيقونات التواصل الاجتماعي -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 جميع الحقوق محفوظة لمحل خدمات متعددة</p>
+    </footer>
+
+    <!-- تحميل مكتبة Bootstrap و FontAwesome -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
